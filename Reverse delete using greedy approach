@@ -1,0 +1,70 @@
+Reverse Delete Algorithm using Greedy Algorithm
+used to obtain a minimum
+. This algorithm is a greedy
+, choosing the best choice given any situation. It is the reverse of Kruskal's
+, which is another greedy algorithm to find a minimum spanning tree. Kruskal’s
+algorithm starts with an empty graph and adds edges while the Reverse-Delete
+In the following example green edges are being evaluated by the algorithm and red 
+This is our original graph. The numbers near the edges indicate
+their edge weight.
+The algorithm will start with the maximum weighted edge,
+which in this case is DE with an edge weight of 15. Since
+deleting edge DE does not further disconnect the graph
+deleted.
+The next largest edge is FG so the algorithm will check if
+deleting this edge will further disconnect the graph. Since
+deleting the edge will not further disconnect the graph, the
+edge is then deleted.
+The next largest edge is edge BD so the algorithm will check
+this edge and delete the edge.
+This is our original graph. The numbers near the edges indicate
+The algorithm will start with the maximum weighted edge,
+with an edge weight of 15. Since
+deleting edge DE does not further disconnect the graph it is
+so the algorithm will check if
+deleting this edge will further disconnect the graph. Since
+deleting the edge will not further disconnect the graph, the
+so the algorithm will check 
+Running time:-
+The algorithm can be shown to run in O(E log V (log log V)3) time (using
+where E is the number of edges and V is the number of vertices. This bound is achieved as
+follows:
+ Sorting the edges by weight using a comparison sort takes O(E log E) time, which can be
+simplified to O(E log V) using the fact that the largest E can be is V2.
+ There are E iterations of the loop.
+ Deleting an edge, checking the connectivity of the resultin
+re-inserting the edge can be done in O(logV (log log V)3) time per operation
+Applications:-
+Network Design
+Designing networks with minimum cost but maximum connectivity
+The next edge to check is edge EG, which will not be deleted
+since it would disconnect node G from the graph. Therefore,
+the next edge to delete is edge BC.
+The next largest edge is edge EF so the algorithm will check this
+edge and delete the edge.
+The algorithm will then search the remaining edges and will not
+find another edge to delete; therefore this is the final graph
+returned by the algorithm.
+hown to run in O(E log V (log log V)3) time (using
+where E is the number of edges and V is the number of vertices. This bound is achieved as
+Sorting the edges by weight using a comparison sort takes O(E log E) time, which can be
+simplified to O(E log V) using the fact that the largest E can be is V2.
+There are E iterations of the loop.
+Deleting an edge, checking the connectivity of the resulting graph, and (if it is disconnected)
+inserting the edge can be done in O(logV (log log V)3) time per operation
+Designing networks with minimum cost but maximum connectivity
+, which will not be deleted
+from the graph. Therefore,
+so the algorithm will check this
+The algorithm will then search the remaining edges and will not
+find another edge to delete; therefore this is the final graph
+hown to run in O(E log V (log log V)3) time (using big-O notation),
+where E is the number of edges and V is the number of vertices. This bound is achieved as
+Sorting the edges by weight using a comparison sort takes O(E log E) time, which can be
+g graph, and (if it is disconnected)
+inserting the edge can be done in O(logV (log log V)3) time per operation
+Designing networks with minimum cost but maximum connectivity 
+Approximation algorithms
+Can be used to bound the optimality of algorithms to approximate
+Traveling Salesman Problem
+Steiner Trees 
